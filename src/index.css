@@ -3,6 +3,11 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.App {
+  margin: 20px;
+}
+
 .App > nav {
   display: flex;
   align-items: center;
@@ -15,3 +20,19 @@ body {
 .App > nav > a:first-of-type {
   margin-left: auto;
 }
+
+.QuestionList > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* bump */

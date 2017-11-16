@@ -1,4 +1,5 @@
 import React from 'react';
+import QuestionSummary from './QuestionSummary';
 
 function QuestionList (props) {
   const {
@@ -9,7 +10,11 @@ function QuestionList (props) {
     <div className="QuestionList">
       {
         questions.map(question => (
-          <p key={question.id}>{question.title}</p>
+          // You can pass all properties of an object as props to a component
+          // using the spread operator (i.e. `...`). Below, all question properties
+          // will be passed to QuestionSummary as props meaning that question id
+          // will be an id prop; the title, a title prop; etc.
+          <QuestionSummary key={question.id} {...question} />
         ))
       }
     </div>
