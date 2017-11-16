@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import QuestionList from './QuestionList';
 import {Question} from '../lib/requests';
 
 class QuestionsIndexPage extends Component {
@@ -19,7 +20,7 @@ class QuestionsIndexPage extends Component {
   render () {
     return (
       <div className="QuestionsIndexPage">
-
+        <QuestionList questions={this.state.questions} />
       </div>
     )
   }
