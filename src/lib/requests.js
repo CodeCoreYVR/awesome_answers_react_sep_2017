@@ -9,5 +9,14 @@ export const Question = {
         headers: {api_key: API_KEY}
       }
     ).then(res => res.json());
+  },
+
+  get (id) {
+    return fetch(
+      `${BASE_URL}/api/v1/questions/${id}`,
+      {
+        headers: {api_key: API_KEY}
+      }
+    ).then(res => res.json());
   }
 }

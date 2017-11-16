@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
   Link
 } from 'react-router-dom';
 
 // P A G E S
 import QuestionsIndexPage from './QuestionsIndexPage';
+import QuestionsShowPage from './QuestionsShowPage';
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <Router>
         <div className="App">
@@ -19,7 +21,10 @@ class App extends Component {
             <Link to="/questions">Questions</Link>
           </nav>
 
-          <Route path="/questions" component={QuestionsIndexPage} />
+          <Switch>
+            <Route path="/questions/:id" component={QuestionsShowPage} />
+            <Route path="/questions" component={QuestionsIndexPage} />
+          </Switch>
         </div>
       </Router>
     );
