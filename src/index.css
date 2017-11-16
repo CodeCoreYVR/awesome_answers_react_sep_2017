@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.App > nav {
+  display: flex;
+  align-items: center;
+}
+
+.App > nav > *:not(:last-child) {
+  margin-right: 15px
+}
+
+.App > nav > a:first-of-type {
+  margin-left: auto;
+}
