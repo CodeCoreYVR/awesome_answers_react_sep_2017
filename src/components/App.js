@@ -9,6 +9,7 @@ import {
 // P A G E S
 import QuestionsIndexPage from './QuestionsIndexPage';
 import QuestionsShowPage from './QuestionsShowPage';
+import QuestionsNewPage from './QuestionsNewPage';
 
 class App extends Component {
   render () {
@@ -18,10 +19,12 @@ class App extends Component {
           <nav>
             <h3>Awesome Answers</h3>
             <Link to="/">Home</Link>
+            <Link to="/questions/new">New Question</Link>
             <Link to="/questions">Questions</Link>
           </nav>
 
           <Switch>
+            <Route path="/questions/new" component={QuestionsNewPage} />
             <Route path="/questions/:id" component={QuestionsShowPage} />
             <Route path="/questions" component={QuestionsIndexPage} />
           </Switch>
