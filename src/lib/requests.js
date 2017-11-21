@@ -8,7 +8,7 @@ export const Question = {
       {
         method: 'POST',
         headers: {
-          api_key: API_KEY,
+          'Authorization': `API_KEY ${API_KEY}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(params)
@@ -20,7 +20,7 @@ export const Question = {
     return fetch(
       `${BASE_URL}/api/v1/questions`,
       {
-        headers: {api_key: API_KEY}
+        headers: {'Authorization': `API_KEY ${API_KEY}`}
       }
     ).then(res => res.json());
   },
@@ -29,7 +29,7 @@ export const Question = {
     return fetch(
       `${BASE_URL}/api/v1/questions/${id}`,
       {
-        headers: {api_key: API_KEY}
+        headers: {'Authorization': `API_KEY ${API_KEY}`}
       }
     ).then(res => res.json());
   }
